@@ -1,0 +1,7 @@
+{
+  "name": "cafe-front",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
