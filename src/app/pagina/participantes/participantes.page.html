@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-button  color="primary" slot="end" (click)="novoParticipante()">
+      Novo
+    </ion-button>
+    <ion-title>Cafe da manha nassau</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="primary">
+      <ion-title size="large"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-item-sliding *ngFor="let c of participantes">
+        <ion-item-options>
+          <ion-item-option color="danger" (click)="remover(c.id)">Delete</ion-item-option>
+        </ion-item-options>
+        <ion-item>{{c.nome}} vai trazer: {{c.prato}}</ion-item>
+        
+
+      </ion-item-sliding>
+      
+    </ion-list>
+  </ion-content>
+
+</ion-content>

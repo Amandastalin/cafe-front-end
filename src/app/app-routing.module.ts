@@ -8,8 +8,16 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'participantes',
     pathMatch: 'full'
+  },
+  {
+    path: 'participantes',
+    loadChildren: () => import('./pagina/participantes/participantes.module').then( m => m.ParticipantesPageModule)
+  },
+  {
+    path: 'modalparticipante',
+    loadChildren: () => import('./pagina/modalparticipante/modalparticipante.module').then( m => m.ModalparticipantePageModule)
   },
 ];
 
